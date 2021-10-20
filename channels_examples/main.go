@@ -4,22 +4,6 @@ import (
 	"fmt"
 )
 
-type CommandType int
-
-const (
-	GetCommand = iota
-	SetCommand
-	IncCommand
-)
-
-type Command struct {
-	ty			CommandType
-	name 		string
-	val 		int
-	replyChan 	chan int
-}
-
-
 
 func main() {
 	ch1 := make(chan int)
